@@ -1,7 +1,7 @@
 <h1>Angular 1</h1>
 
-<app-header></app-header>
+<app-header [title]="clickText"></app-header>
 
-<app-button (myClick)="clicked('click')" text="click"></app-button>
+<app-button (myClick)="clicked($event)" [text]="clickText"></app-button>
 
-<app-button (myClick)="clicked('cancel')" text="cancel"></app-button>
+<app-button (myClick)="clicked($event)" [text]="cancelText"></app-button>

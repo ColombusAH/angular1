@@ -8,8 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular1';
 
+  clickText = 'click';
+  cancelText = 'cancel';
 
-  clicked(name: string) {
-    console.log(name);
+  clicked(e: MouseEvent) {
+    this.clickText = 'worked!';
+    console.log(e);
   }
 }
