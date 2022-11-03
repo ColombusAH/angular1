@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'angular1';
 
   clickText = 'click';
@@ -14,5 +15,9 @@ export class AppComponent {
   clicked(e: MouseEvent) {
     this.clickText = 'worked!';
     console.log(e);
+  }
+
+  onAvatarClick($event: Event) {
+    console.log($event);
   }
 }

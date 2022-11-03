@@ -1,4 +1,4 @@
-<app-header [title]="clickText"></app-header>
+<app-header [title]="clickText" (avatarClick)="onAvatarClick($event)"></app-header>
 
 <app-button (myClick)="clicked($event)" [text]="clickText"></app-button>
 

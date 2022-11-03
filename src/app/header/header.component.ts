@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input() title: string = '';
+  @Output() avatarClick = new EventEmitter<Event>();
 
   constructor() { }
 
@@ -15,6 +17,9 @@ export class HeaderComponent implements OnInit {
   }
 
 
-
+  onAvatarClick(event: Event) {
+    this.avatarClick.emit(event);
+    console.log('[HeaderComponent] onAvatarClick');
+  }
 }
 
