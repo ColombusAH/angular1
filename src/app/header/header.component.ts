@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
 
   @Input() title: string = '';
   @Output() avatarClick = new EventEmitter<Event>();
+  user = { name: 'super user', dob: new Date() };
 
   constructor() { }
 

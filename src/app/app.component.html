@@ -1,5 +1,16 @@
-<app-header [title]="clickText" (avatarClick)="onAvatarClick($event)"></app-header>
+<app-header
+  *ngIf="showHeader"
+  [title]="clickText"
+  (avatarClick)="onAvatarClick($event)"
+></app-header>
 
-<app-button (myClick)="clicked($event)" [text]="clickText"></app-button>
+<app-button
+  *ngFor="let btn of buttonsName"
+  (myClick)="clicked($event, btn)"
+  [text]="btn"
+></app-button>
 
-<app-button (myClick)="clicked($event)" [text]="cancelText"></app-button>
+
+<ng-container *ngIf="clickText"><h2>x</h2> </ng-container>
+
+<app-button (myClick)="clicked($event, '')" [text]="cancelText"></app-button>

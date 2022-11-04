@@ -1,4 +1,8 @@
 <header>
   <h2>{{ title }}</h2>
-  <app-avatar (click)="onAvatarClick($event)" imageSrc="assets/images/rick_avatar.png"></app-avatar>
+  <app-avatar
+    (click)="onAvatarClick($event)"
+    imageSrc="assets/images/rick_avatar.png"
+    [user]="user"
+  ></app-avatar>
 </header>
