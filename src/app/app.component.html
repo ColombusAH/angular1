@@ -4,13 +4,9 @@
   (avatarClick)="onAvatarClick($event)"
 ></app-header>
 
-<app-button
-  *ngFor="let btn of buttonsName"
-  (myClick)="clicked($event, btn)"
-  [text]="btn"
-></app-button>
-
-
-<ng-container *ngIf="clickText"><h2>x</h2> </ng-container>
-
-<app-button (myClick)="clicked($event, '')" [text]="cancelText"></app-button>
+<app-product-item
+  desc="some description"
+  title="some title"
+  [price]="100"
+  imageSrc="assets/images/rick_avatar.png"
+></app-product-item>
