@@ -7,6 +7,7 @@ import { ButtonComponent } from './button/button.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { ShortSentencePipe } from './short-sentence.pipe';
 import { ProductItemComponent } from './product-item/product-item.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductItemComponent } from './product-item/product-item.component';
     ButtonComponent,
     AvatarComponent,
     ShortSentencePipe,
-    ProductItemComponent
+    ProductItemComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule

@@ -1,0 +1,7 @@
+<app-product-item
+  *ngFor="let product of products; trackBy: trackByProductId"
+  [desc]="product.description"
+  [price]="product.price"
+  [title]="product.title"
+  [imageSrc]="product.imageUrl"
+></app-product-item>

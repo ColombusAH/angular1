@@ -3,10 +3,4 @@
   [title]="clickText"
   (avatarClick)="onAvatarClick($event)"
 ></app-header>
-
-<app-product-item
-  desc="some description"
-  title="some title"
-  [price]="100"
-  imageSrc="assets/images/rick_avatar.png"
-></app-product-item>
+<app-product-list [products]="products"></app-product-list>
