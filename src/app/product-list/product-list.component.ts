@@ -15,7 +15,7 @@ export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.products);
+
   }
 
   trackByProductId(index: number, product: IProduct) {

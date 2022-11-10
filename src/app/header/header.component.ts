@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
 
   onAvatarClick(event: Event) {
     this.avatarClick.emit(event);
-    console.log('[HeaderComponent] onAvatarClick');
+
   }
 }
 

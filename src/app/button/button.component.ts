@@ -17,7 +17,7 @@ export class ButtonComponent implements OnInit {
   }
 
   handleClick(e: MouseEvent) {
-    console.log(e);
+
     this.myClick.emit(e);
   }
 

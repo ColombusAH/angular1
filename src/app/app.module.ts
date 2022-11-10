@@ -8,6 +8,7 @@ import { AvatarComponent } from './avatar/avatar.component';
 import { ShortSentencePipe } from './short-sentence.pipe';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductsPageComponent } from './products-page/products-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     AvatarComponent,
     ShortSentencePipe,
     ProductItemComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductsPageComponent
   ],
   imports: [
     BrowserModule

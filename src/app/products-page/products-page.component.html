@@ -1,0 +1,27 @@
+<div class="border" *ngIf="!!selectedProduct" (click)="selectedProduct = null">
+  <app-product-item
+    [desc]="selectedProduct?.description || ''"
+    [imageSrc]="selectedProduct.imageUrl"
+    [price]="selectedProduct.price"
+  ></app-product-item>
+</div>
+
+<app-product-list
+  [products]="products"
+  (productClicked)="handleProductClicked($event)"
+></app-product-list>
+
+<div [ngSwitch]="selectedColor">
+  <div *ngSwitchCase="COLOR.BLUE" (click)="selectedColor = COLOR.GREEN">
+    <h1>i am blue</h1>
+  </div>
+  <div *ngSwitchCase="COLOR.RED">
+    <h1>i am red</h1>
+  </div>
+  <div *ngSwitchCase="COLOR.GREEN">
+    <h1>i am green</h1>
+  </div>
+  <div>
+    <div *ngSwitchDefault>...</div>
+  </div>
+</div>
