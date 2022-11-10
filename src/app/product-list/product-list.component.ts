@@ -1,12 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { IProduct } from '../models';
 
-interface IProduct {
-  _id: string;
-  title: string;
-  description: string;
-  price: number;
-  imageUrl: string;
-}
+
 
 @Component({
   selector: 'app-product-list',
@@ -15,6 +10,7 @@ interface IProduct {
 })
 export class ProductListComponent implements OnInit {
   @Input() products: IProduct[] = [];
+  @Output() productClicked = new EventEmitter<IProduct>();
 
   constructor() { }
 

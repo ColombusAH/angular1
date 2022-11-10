@@ -3,4 +3,7 @@
   [title]="clickText"
   (avatarClick)="onAvatarClick($event)"
 ></app-header>
-<app-product-list [products]="products"></app-product-list>
+<app-product-list
+  [products]="products"
+  (productClicked)="doSomethingWith($event)"
+></app-product-list>

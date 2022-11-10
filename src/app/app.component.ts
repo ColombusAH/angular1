@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProduct } from './models';
 
 @Component({
   selector: 'app-root',
@@ -59,12 +60,16 @@ export class AppComponent {
 
   }
 
-  onAvatarClick($event: Event) {
-    console.log($event);
+  onAvatarClick(event: Event) {
+    console.log(event);
   }
 
   doda(index: number, name: string) {
     console.log(index, name);
     return name;
+  }
+
+  doSomethingWith(product: IProduct) {
+    console.log(product);
   }
 }

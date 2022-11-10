@@ -1,5 +1,6 @@
 <app-product-item
   *ngFor="let product of products; trackBy: trackByProductId"
+  (click)="productClicked.emit(product)"
   [desc]="product.description"
   [price]="product.price"
   [title]="product.title"
