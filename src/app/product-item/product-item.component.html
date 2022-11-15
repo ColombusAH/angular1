@@ -1,5 +1,6 @@
 <div class="product-item">
-  <h3>{{ title }}</h3>
+  <h3>{{ finalTile }}</h3>
+  <h4 *ngIf="priceReduced">price reduced</h4>
   <h5>{{ price | currency }}</h5>
   <img [src]="imageSrc" [alt]="title" />
   <p>{{ desc }}</p>

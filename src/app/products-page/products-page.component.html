@@ -1,12 +1,29 @@
-<div class="border" *ngIf="!!selectedProduct" (click)="selectedProduct = null">
-  <app-product-item
-    [desc]="selectedProduct?.description || ''"
-    [imageSrc]="selectedProduct.imageUrl"
-    [price]="selectedProduct.price"
-  ></app-product-item>
-</div>
+<ng-template
+  [ngIf]="!!selectedProduct"
+  [ngIfThen]="selectedProductTemplate"
+  [ngIfElse]="noSelectedProductTemplate"
+>
+</ng-template>
+
+<ng-template #selectedProductTemplate>
+  <div class="border success" (click)="selectedProduct = null">
+    <app-product-item
+      [desc]="selectedProduct?.description || ''"
+      [imageSrc]="selectedProduct?.imageUrl || ''"
+      [price]="selectedProduct?.price || 0"
+    ></app-product-item>
+  </div>
+</ng-template>
+
+<ng-template #noSelectedProductTemplate>
+  <div class="border">
+    <h1>no selected</h1>
+  </div>
+</ng-template>
 
 <app-product-list
+  #productList
+  *ngIf="products && products.length; else noSelectedProductTemplate"
   [products]="products"
   (productClicked)="handleProductClicked($event)"
 ></app-product-list>

@@ -1,3 +1,10 @@
+<button (click)="products[0].price = products[0].price - 100">
+  - decrease price
+</button>
+
+<button (click)="products[0].price = products[0].price + 100">
+  + increase price
+</button>
 <app-product-item
   *ngFor="let product of products; trackBy: trackByProductId"
   (click)="productClicked.emit(product)"

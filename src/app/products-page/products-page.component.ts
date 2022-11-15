@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { IProduct } from '../models';
+import { ProductListComponent } from '../product-list/product-list.component';
 
 enum COLOR {
   BLUE = 'BLUE',
@@ -12,7 +13,8 @@ enum COLOR {
   templateUrl: './products-page.component.html',
   styleUrls: ['./products-page.component.scss']
 })
-export class ProductsPageComponent implements OnInit {
+export class ProductsPageComponent implements OnInit, AfterViewInit {
+  @ViewChild('productList') productList: ProductListComponent | null = null;
   selectedProduct: IProduct | null = null;
   selectedColor: COLOR = COLOR.BLUE;
   COLOR = COLOR;
@@ -54,12 +56,21 @@ export class ProductsPageComponent implements OnInit {
       "description": "Consequat dolor aute ut in et ipsum. Excepteur eu exercitation aute dolor commodo labore culpa eiusmod commodo elit sunt. Ut duis labore laborum cillum eiusmod proident et sunt. Reprehenderit reprehenderit ex commodo sint eu aliqua officia cupidatat sit proident fugiat enim mollit. Laboris pariatur cupidatat quis occaecat sint incididunt. Laboris qui aute aliquip ipsum proident quis voluptate ut reprehenderit irure incididunt irure dolor ea. Ex anim magna enim labore nisi nulla elit mollit est voluptate dolor in do.\r\n"
     }
   ];
+  // products = []
 
 
 
   constructor() { }
 
+
   ngOnInit(): void {
+    console.log('ngOnInit');
+    console.log(this.productList);
+  }
+
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit');
+    console.log(this.productList?.products);
   }
 
 
