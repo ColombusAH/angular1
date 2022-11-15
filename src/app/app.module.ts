@@ -9,6 +9,7 @@ import { ShortSentencePipe } from './short-sentence.pipe';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
+import { BorderWrapperComponent } from './border-wrapper/border-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProductsPageComponent } from './products-page/products-page.component';
     ShortSentencePipe,
     ProductItemComponent,
     ProductListComponent,
-    ProductsPageComponent
+    ProductsPageComponent,
+    BorderWrapperComponent
   ],
   imports: [
     BrowserModule

@@ -1,15 +1,23 @@
-<button (click)="products[0].price = products[0].price - 100">
-  - decrease price
-</button>
+<app-border-wrapper color="red">
+  <button (click)="products[0].price = products[0].price - 100">
+    - decrease price
+  </button>
+</app-border-wrapper>
 
-<button (click)="products[0].price = products[0].price + 100">
-  + increase price
-</button>
-<app-product-item
+<app-border-wrapper color="green">
+  <button (click)="products[0].price = products[0].price + 100">
+    + increase price
+  </button>
+</app-border-wrapper>
+
+<app-border-wrapper
+  color="blue"
   *ngFor="let product of products; trackBy: trackByProductId"
-  (click)="productClicked.emit(product)"
-  [desc]="product.description"
-  [price]="product.price"
-  [title]="product.title"
-  [imageSrc]="product.imageUrl"
-></app-product-item>
+  ><app-product-item
+    (click)="productClicked.emit(product)"
+    [desc]="product.description"
+    [price]="product.price"
+    [title]="product.title"
+    [imageSrc]="product.imageUrl"
+  ></app-product-item>
+</app-border-wrapper>
